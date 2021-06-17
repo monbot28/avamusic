@@ -114,7 +114,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/cf2681244ee63cb64e4cb.png"
+        thumb_name = "https://telegra.ph/file/fb54f009a76db3e38db8d.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "locally added"
@@ -159,7 +159,7 @@ async def play(_, message: Message):
                 )
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://telegra.ph/file/cf2681244ee63cb64e4cb.png"
+            thumb_name = "https://telegra.ph/file/fb54f009a76db3e38db8d.png"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
