@@ -92,13 +92,10 @@ async def play(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                        text="🌺 CHANNEL",
-                        url="https://t.me/levinachannel")
-                ],[
-                    InlineKeyboardButton("🗑 Close",'cls') 
-                   
-                ]
+                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("⛑ Owner", url="https://t.me/mondisini"),
+                ],
+                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
         )
 
@@ -118,14 +115,13 @@ async def play(_, message: Message):
         duration = round(audio.duration / 60)
         views = "locally added"
         keyboard = InlineKeyboardMarkup(
+            [
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="🌺 CHANNEL",
-                            url=f"https://t.me/levinachannel")
-
-                    ]
-                ]
+                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("⛑ Owner", url="https://t.me/mondisini"),
+                ],
+                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+            ]
             )
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)  
@@ -147,14 +143,13 @@ async def play(_, message: Message):
             url_suffix = results[0]["url_suffix"]
             views = results[0]["views"]
             keyboard = InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                text="🌺 CHANNEL",
-                                url=f"https://t.me/levinachannel")
-
-                        ]
-                    ]
+            [
+                [
+                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("⛑ Owner", url="https://t.me/mondisini"),
+                ],
+                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+            ]
                 )
         except Exception as e:
             title = "NaN"
@@ -162,14 +157,13 @@ async def play(_, message: Message):
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                text="💬 GROUP",
-                                url=f"https://t.me/gcsupportbots")
-
-                        ]
-                    ]
+            [
+                [
+                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("⛑ Owner", url="https://t.me/mondisini"),
+                ],
+                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+            ]
                 )
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)     
@@ -209,14 +203,13 @@ async def play(_, message: Message):
             return
 
         keyboard = InlineKeyboardMarkup(
+            [
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="🌺 CHANNEL",
-                            url=f"https://t.me/levinachannel")
-
-                    ]
-                ]
+                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
+                    InlineKeyboardButton("⛑ Owner", url="https://t.me/mondisini"),
+                ],
+                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+            ]
             )
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)  
