@@ -9,7 +9,7 @@ from helpers.filters import other_filters2
 async def start(_, message: Message):
     await message.reply_sticker("CAACAgUAAxkBAAEKORJguwR4VsN1PCqbNh82LgABstqGU2EAAjMCAAK8hthX2HwTiIOxnxofBA")
     await message.reply_text(
-        f"""hai 👋🏻, nama saya ava music bot, saya dapat memutar lagu di voice chat group anda.
+        f"""hai 👋🏻, nama saya mon music bot, saya dapat memutar lagu di voice chat group anda.
 
 ➠ Tekan tombol panduan menggunakan bot di bawah jika ingin mengetahui bagaimana cara menggunakan saya.
 
@@ -22,14 +22,14 @@ async def start(_, message: Message):
                         "📚 Panduan Menggunakan Bot", url="https://telegra.ph/ava-command-list-05-27")
                   ],[
                     InlineKeyboardButton(
-                        "💬 Group Support", url="https://t.me/gcsupportbots"
+                        "🎧 Group Support", url="https://t.me/gcsupportbots"
                     ),
                     InlineKeyboardButton(
-                        "🔊 Channel Support", url="https://t.me/levinachannel"
+                        "📣 Channel Support", url="https://t.me/levinachannel"
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "🎁 Kirim Donasi", url="https://t.me/dlwrml"
+                        "🎶 Owner", url="https://t.me/mondisini"
                     )]
             ]
         ),
@@ -43,7 +43,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🌺 Channel Support", url="https://t.me/levinachannel")
+                        "📣 Channel Support", url="https://t.me/chmongabut")
                 ]
             ]
         )
